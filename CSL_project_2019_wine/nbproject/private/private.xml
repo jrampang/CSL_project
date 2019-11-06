@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/32/jrampang/NetBeansProjects/CSL_project_2019_wine/web/food/List.xhtml</file>
+            <file>file:/home/32/jrampang/NetBeansProjects/CSL_project_2019_wine/web/WEB-INF/faces-config.xml</file>
+            <file>file:/home/32/jrampang/NetBeansProjects/CSL_project_2019_wine/src/java/persistence/Merchants.java</file>
+            <file>file:/home/32/jrampang/NetBeansProjects/CSL_project_2019_wine/web/WEB-INF/web.xml</file>
+            <file>file:/home/32/jrampang/NetBeansProjects/CSL_project_2019_wine/web/WEB-INF/glassfish-resources.xml</file>
+            <file>file:/home/32/jrampang/NetBeansProjects/CSL_project_2019_wine/src/java/presentation/FoodController.java</file>
+            <file>file:/home/32/jrampang/NetBeansProjects/CSL_project_2019_wine/src/java/service/InfoSourcesFacade.java</file>
+            <file>file:/home/32/jrampang/NetBeansProjects/CSL_project_2019_wine/web/wine/Edit.xhtml</file>
+            <file>file:/home/32/jrampang/NetBeansProjects/CSL_project_2019_wine/src/conf/persistence.xml</file>
+            <file>file:/home/32/jrampang/NetBeansProjects/CSL_project_2019_wine/src/java/presentation/MerchantsController.java</file>
+            <file>file:/home/32/jrampang/NetBeansProjects/CSL_project_2019_wine/web/wineColours/Edit.xhtml</file>
+            <file>file:/home/32/jrampang/NetBeansProjects/CSL_project_2019_wine/src/java/presentation/InfoSourcesController.java</file>
+            <file>file:/home/32/jrampang/NetBeansProjects/CSL_project_2019_wine/src/java/service/CountriesFacade.java</file>
+            <file>file:/home/32/jrampang/NetBeansProjects/CSL_project_2019_wine/web/resources/css/jsfcrud.css</file>
+            <file>file:/home/32/jrampang/NetBeansProjects/CSL_project_2019_wine/src/java/persistence/Countries.java</file>
+            <file>file:/home/32/jrampang/NetBeansProjects/CSL_project_2019_wine/web/food/View.xhtml</file>
+            <file>file:/home/32/jrampang/NetBeansProjects/CSL_project_2019_wine/web/index.xhtml</file>
+            <file>file:/home/32/jrampang/NetBeansProjects/CSL_project_2019_wine/src/java/presentation/CountriesController.java</file>
+            <file>file:/home/32/jrampang/NetBeansProjects/CSL_project_2019_wine/src/java/service/FoodFacade.java</file>
+            <file>file:/home/32/jrampang/NetBeansProjects/CSL_project_2019_wine/web/wine/View.xhtml</file>
+            <file>file:/home/32/jrampang/NetBeansProjects/CSL_project_2019_wine/web/template.xhtml</file>
+            <file>file:/home/32/jrampang/NetBeansProjects/CSL_project_2019_wine/src/java/service/AbstractFacade.java</file>
+        </group>
+    </open-files>
+</project-private>

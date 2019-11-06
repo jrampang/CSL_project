@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateWineTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateWineLabel_wineId}" for="wineId" />
+                    <h:inputText id="wineId" value="#{wineController.selected.wineId}" title="#{bundle.CreateWineTitle_wineId}" required="true" requiredMessage="#{bundle.CreateWineRequiredMessage_wineId}"/>
+                    <h:outputLabel value="#{bundle.CreateWineLabel_wineName}" for="wineName" />
+                    <h:inputText id="wineName" value="#{wineController.selected.wineName}" title="#{bundle.CreateWineTitle_wineName}" required="true" requiredMessage="#{bundle.CreateWineRequiredMessage_wineName}"/>
+                    <h:outputLabel value="#{bundle.CreateWineLabel_wineDescription}" for="wineDescription" />
+                    <h:inputText id="wineDescription" value="#{wineController.selected.wineDescription}" title="#{bundle.CreateWineTitle_wineDescription}" required="true" requiredMessage="#{bundle.CreateWineRequiredMessage_wineDescription}"/>
+                    <h:outputLabel value="#{bundle.CreateWineLabel_labelPictureFilename}" for="labelPictureFilename" />
+                    <h:inputText id="labelPictureFilename" value="#{wineController.selected.labelPictureFilename}" title="#{bundle.CreateWineTitle_labelPictureFilename}" required="true" requiredMessage="#{bundle.CreateWineRequiredMessage_labelPictureFilename}"/>
+                    <h:outputLabel value="#{bundle.CreateWineLabel_goodYears}" for="goodYears" />
+                    <h:inputText id="goodYears" value="#{wineController.selected.goodYears}" title="#{bundle.CreateWineTitle_goodYears}" required="true" requiredMessage="#{bundle.CreateWineRequiredMessage_goodYears}"/>
+                    <h:outputLabel value="#{bundle.CreateWineLabel_priceBottle}" for="priceBottle" />
+                    <h:inputText id="priceBottle" value="#{wineController.selected.priceBottle}" title="#{bundle.CreateWineTitle_priceBottle}" required="true" requiredMessage="#{bundle.CreateWineRequiredMessage_priceBottle}"/>
+                    <h:outputLabel value="#{bundle.CreateWineLabel_priceHalfBottle}" for="priceHalfBottle" />
+                    <h:inputText id="priceHalfBottle" value="#{wineController.selected.priceHalfBottle}" title="#{bundle.CreateWineTitle_priceHalfBottle}" required="true" requiredMessage="#{bundle.CreateWineRequiredMessage_priceHalfBottle}"/>
+                    <h:outputLabel value="#{bundle.CreateWineLabel_infoSourceId}" for="infoSourceId" />
+                    <h:selectOneMenu id="infoSourceId" value="#{wineController.selected.infoSourceId}" title="#{bundle.CreateWineTitle_infoSourceId}" required="true" requiredMessage="#{bundle.CreateWineRequiredMessage_infoSourceId}">
+                        <f:selectItems value="#{infoSourcesController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.CreateWineLabel_ratingId}" for="ratingId" />
+                    <h:selectOneMenu id="ratingId" value="#{wineController.selected.ratingId}" title="#{bundle.CreateWineTitle_ratingId}" required="true" requiredMessage="#{bundle.CreateWineRequiredMessage_ratingId}">
+                        <f:selectItems value="#{ratingGuideController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.CreateWineLabel_winemakerId}" for="winemakerId" />
+                    <h:selectOneMenu id="winemakerId" value="#{wineController.selected.winemakerId}" title="#{bundle.CreateWineTitle_winemakerId}" required="true" requiredMessage="#{bundle.CreateWineRequiredMessage_winemakerId}">
+                        <f:selectItems value="#{winemakerController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.CreateWineLabel_colour}" for="colour" />
+                    <h:selectOneMenu id="colour" value="#{wineController.selected.colour}" title="#{bundle.CreateWineTitle_colour}" required="true" requiredMessage="#{bundle.CreateWineRequiredMessage_colour}">
+                        <f:selectItems value="#{wineColoursController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{wineController.create}" value="#{bundle.CreateWineSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{wineController.prepareList}" value="#{bundle.CreateWineShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateWineIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
