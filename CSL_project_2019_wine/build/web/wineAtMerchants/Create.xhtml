@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateWineAtMerchantsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateWineAtMerchantsLabel_offerStartDate}" for="offerStartDate" />
+                    <h:inputText id="offerStartDate" value="#{wineAtMerchantsController.selected.offerStartDate}" title="#{bundle.CreateWineAtMerchantsTitle_offerStartDate}" required="true" requiredMessage="#{bundle.CreateWineAtMerchantsRequiredMessage_offerStartDate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateWineAtMerchantsLabel_offerEndDate}" for="offerEndDate" />
+                    <h:inputText id="offerEndDate" value="#{wineAtMerchantsController.selected.offerEndDate}" title="#{bundle.CreateWineAtMerchantsTitle_offerEndDate}" required="true" requiredMessage="#{bundle.CreateWineAtMerchantsRequiredMessage_offerEndDate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateWineAtMerchantsLabel_priceOnOffer}" for="priceOnOffer" />
+                    <h:inputText id="priceOnOffer" value="#{wineAtMerchantsController.selected.priceOnOffer}" title="#{bundle.CreateWineAtMerchantsTitle_priceOnOffer}" required="true" requiredMessage="#{bundle.CreateWineAtMerchantsRequiredMessage_priceOnOffer}"/>
+                    <h:outputLabel value="#{bundle.CreateWineAtMerchantsLabel_merchants}" for="merchants" />
+                    <h:selectOneMenu id="merchants" value="#{wineAtMerchantsController.selected.merchants}" title="#{bundle.CreateWineAtMerchantsTitle_merchants}" required="true" requiredMessage="#{bundle.CreateWineAtMerchantsRequiredMessage_merchants}">
+                        <f:selectItems value="#{merchantsController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.CreateWineAtMerchantsLabel_wine}" for="wine" />
+                    <h:selectOneMenu id="wine" value="#{wineAtMerchantsController.selected.wine}" title="#{bundle.CreateWineAtMerchantsTitle_wine}" required="true" requiredMessage="#{bundle.CreateWineAtMerchantsRequiredMessage_wine}">
+                        <f:selectItems value="#{wineController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{wineAtMerchantsController.create}" value="#{bundle.CreateWineAtMerchantsSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{wineAtMerchantsController.prepareList}" value="#{bundle.CreateWineAtMerchantsShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateWineAtMerchantsIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

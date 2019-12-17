@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateWineGoesWithFoodTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateWineGoesWithFoodLabel_comments}" for="comments" />
+                    <h:inputText id="comments" value="#{wineGoesWithFoodController.selected.comments}" title="#{bundle.CreateWineGoesWithFoodTitle_comments}" required="true" requiredMessage="#{bundle.CreateWineGoesWithFoodRequiredMessage_comments}"/>
+                    <h:outputLabel value="#{bundle.CreateWineGoesWithFoodLabel_food}" for="food" />
+                    <h:selectOneMenu id="food" value="#{wineGoesWithFoodController.selected.food}" title="#{bundle.CreateWineGoesWithFoodTitle_food}" required="true" requiredMessage="#{bundle.CreateWineGoesWithFoodRequiredMessage_food}">
+                        <f:selectItems value="#{foodController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.CreateWineGoesWithFoodLabel_wine}" for="wine" />
+                    <h:selectOneMenu id="wine" value="#{wineGoesWithFoodController.selected.wine}" title="#{bundle.CreateWineGoesWithFoodTitle_wine}" required="true" requiredMessage="#{bundle.CreateWineGoesWithFoodRequiredMessage_wine}">
+                        <f:selectItems value="#{wineController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{wineGoesWithFoodController.create}" value="#{bundle.CreateWineGoesWithFoodSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{wineGoesWithFoodController.prepareList}" value="#{bundle.CreateWineGoesWithFoodShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateWineGoesWithFoodIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
