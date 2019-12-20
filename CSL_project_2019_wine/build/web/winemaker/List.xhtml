@@ -15,6 +15,7 @@
                     <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
                 </h:panelGroup>
                 <h:outputText escape="false" value="#{bundle.ListWinemakerEmpty}" rendered="#{winemakerController.items.rowCount == 0}"/>
+                <br/>
                 <h:panelGroup rendered="#{winemakerController.items.rowCount > 0}">
                     <h:outputText value="#{winemakerController.pagination.pageFirstItem + 1}..#{winemakerController.pagination.pageLastItem + 1}/#{winemakerController.pagination.itemsCount}"/>&nbsp;
                     <h:commandLink action="#{winemakerController.previous}" value="#{bundle.Previous} #{winemakerController.pagination.pageSize}" rendered="#{winemakerController.pagination.hasPreviousPage}"/>&nbsp;
@@ -42,11 +43,11 @@
                             <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
-                            <h:commandLink action="#{winemakerController.prepareView}" value="#{bundle.ListWinemakerViewLink}"/>
+                            <div class="tableLink"><img id="linkImg" src="../resources/image/view.png"/><h:commandLink class="tableLink" action="#{winemakerController.prepareView}" value="#{bundle.ListWinemakerViewLink}"/></div>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{winemakerController.prepareEdit}" value="#{bundle.ListWinemakerEditLink}"/>
+                            <div class="tableLink"><img id="linkImg" src="../resources/image/edit.png"/><h:commandLink class="tableLink" action="#{winemakerController.prepareEdit}" value="#{bundle.ListWinemakerEditLink}"/></div>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{winemakerController.destroy}" value="#{bundle.ListWinemakerDestroyLink}"/>
+                            <div class="tableLink"><img id="linkImg" src="../resources/image/delete.png"/><h:commandLink class="tableLink" action="#{winemakerController.destroy}" value="#{bundle.ListWinemakerDestroyLink}"/></div>
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>

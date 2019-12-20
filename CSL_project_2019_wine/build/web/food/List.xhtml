@@ -15,6 +15,7 @@
                     <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
                 </h:panelGroup>
                 <h:outputText escape="false" value="#{bundle.ListFoodEmpty}" rendered="#{foodController.items.rowCount == 0}"/>
+                <br/>
                 <h:panelGroup rendered="#{foodController.items.rowCount > 0}">
                     <h:outputText value="#{foodController.pagination.pageFirstItem + 1}..#{foodController.pagination.pageLastItem + 1}/#{foodController.pagination.itemsCount}"/>&nbsp;
                     <h:commandLink action="#{foodController.previous}" value="#{bundle.Previous} #{foodController.pagination.pageSize}" rendered="#{foodController.pagination.hasPreviousPage}"/>&nbsp;
@@ -36,11 +37,11 @@
                             <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
-                            <h:commandLink action="#{foodController.prepareView}" value="#{bundle.ListFoodViewLink}"/>
+                            <div class="tableLink"><img id="linkImg" src="../resources/image/view.png"/><h:commandLink class="tableLink" action="#{foodController.prepareView}" value="#{bundle.ListFoodViewLink}"/></div>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{foodController.prepareEdit}" value="#{bundle.ListFoodEditLink}"/>
+                            <div class="tableLink"><img id="linkImg" src="../resources/image/edit.png"/><h:commandLink class="tableLink" action="#{foodController.prepareEdit}" value="#{bundle.ListFoodEditLink}"/></div>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{foodController.destroy}" value="#{bundle.ListFoodDestroyLink}"/>
+                            <div class="tableLink"><img id="linkImg" src="../resources/image/delete.png"/><h:commandLink class="tableLink" action="#{foodController.destroy}" value="#{bundle.ListFoodDestroyLink}"/></div>
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>

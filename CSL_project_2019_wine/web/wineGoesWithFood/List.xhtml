@@ -15,6 +15,7 @@
                     <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
                 </h:panelGroup>
                 <h:outputText escape="false" value="#{bundle.ListWineGoesWithFoodEmpty}" rendered="#{wineGoesWithFoodController.items.rowCount == 0}"/>
+                <br/>
                 <h:panelGroup rendered="#{wineGoesWithFoodController.items.rowCount > 0}">
                     <h:outputText value="#{wineGoesWithFoodController.pagination.pageFirstItem + 1}..#{wineGoesWithFoodController.pagination.pageLastItem + 1}/#{wineGoesWithFoodController.pagination.itemsCount}"/>&nbsp;
                     <h:commandLink action="#{wineGoesWithFoodController.previous}" value="#{bundle.Previous} #{wineGoesWithFoodController.pagination.pageSize}" rendered="#{wineGoesWithFoodController.pagination.hasPreviousPage}"/>&nbsp;
@@ -42,11 +43,11 @@
                             <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
-                            <h:commandLink action="#{wineGoesWithFoodController.prepareView}" value="#{bundle.ListWineGoesWithFoodViewLink}"/>
+                            <div class="tableLink"><img id="linkImg" src="../resources/image/view.png"/><h:commandLink class="tableLink" action="#{wineGoesWithFoodController.prepareView}" value="#{bundle.ListWineGoesWithFoodViewLink}"/></div>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{wineGoesWithFoodController.prepareEdit}" value="#{bundle.ListWineGoesWithFoodEditLink}"/>
+                            <div class="tableLink"><img id="linkImg" src="../resources/image/edit.png"/><h:commandLink class="tableLink" action="#{wineGoesWithFoodController.prepareEdit}" value="#{bundle.ListWineGoesWithFoodEditLink}"/></div>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{wineGoesWithFoodController.destroy}" value="#{bundle.ListWineGoesWithFoodDestroyLink}"/>
+                            <div class="tableLink"><img id="linkImg" src="../resources/image/delete.png"/><h:commandLink class="tableLink" action="#{wineGoesWithFoodController.destroy}" value="#{bundle.ListWineGoesWithFoodDestroyLink}"/></div>
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>

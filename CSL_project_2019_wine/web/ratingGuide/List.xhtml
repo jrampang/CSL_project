@@ -15,8 +15,9 @@
                     <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
                 </h:panelGroup>
                 <h:outputText escape="false" value="#{bundle.ListRatingGuideEmpty}" rendered="#{ratingGuideController.items.rowCount == 0}"/>
+                <br/>
                 <h:panelGroup rendered="#{ratingGuideController.items.rowCount > 0}">
-                    <h:outputText value="#{ratingGuideController.pagination.pageFirstItem + 1}..#{ratingGuideController.pagination.pageLastItem + 1}/#{ratingGuideController.pagination.itemsCount}"/>&nbsp;
+                    <h:outputText id="nbItem" value="#{ratingGuideController.pagination.pageFirstItem + 1}..#{ratingGuideController.pagination.pageLastItem + 1}/#{ratingGuideController.pagination.itemsCount}"/>&nbsp;
                     <h:commandLink action="#{ratingGuideController.previous}" value="#{bundle.Previous} #{ratingGuideController.pagination.pageSize}" rendered="#{ratingGuideController.pagination.hasPreviousPage}"/>&nbsp;
                     <h:commandLink action="#{ratingGuideController.next}" value="#{bundle.Next} #{ratingGuideController.pagination.pageSize}" rendered="#{ratingGuideController.pagination.hasNextPage}"/>&nbsp;
                     <h:dataTable value="#{ratingGuideController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
@@ -42,11 +43,11 @@
                             <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
-                            <h:commandLink action="#{ratingGuideController.prepareView}" value="#{bundle.ListRatingGuideViewLink}"/>
+                            <div class="tableLink"><img id="linkImg" src="../resources/image/view.png"/><h:commandLink class="tableLink" action="#{ratingGuideController.prepareView}" value="#{bundle.ListRatingGuideViewLink}"/></div>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{ratingGuideController.prepareEdit}" value="#{bundle.ListRatingGuideEditLink}"/>
+                            <div class="tableLink"><img id="linkImg" src="../resources/image/edit.png"/><h:commandLink class="tableLink" action="#{ratingGuideController.prepareEdit}" value="#{bundle.ListRatingGuideEditLink}"/></div>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{ratingGuideController.destroy}" value="#{bundle.ListRatingGuideDestroyLink}"/>
+                            <div class="tableLink"><img id="linkImg" src="../resources/image/delete.png"/><h:commandLink class="tableLink" action="#{ratingGuideController.destroy}" value="#{bundle.ListRatingGuideDestroyLink}"/></div>
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>

@@ -2,21 +2,55 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+          
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
 
     <h:head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title><ui:insert name="title">Default Title</ui:insert></title>
         <h:outputStylesheet library="css" name="jsfcrud.css"/>
+        <!--<f:loadBundle basename="Bundle" var="bundle"/>-->
     </h:head>
 
     <h:body>
+        <header><ul>
+            <li class="header"><h:link class="index" outcome="/index" value="Accueil"/></li>
+            <li class="header"><h:link class="index" outcome="/countries/List" value="Countries"/></li>
+       
+            <li class="header"><h:link class="index" outcome="/food/List" value="Food"/></li>
+        
+            <li class="header"><h:link class="index" outcome="/infoSources/List" value="InfoSources"/></li>
+        
+            <li class="header"><h:link class="index" outcome="/merchants/List" value="Merchants"/></li>
+        
+            <li class="header"><h:link class="index" outcome="/ratingGuide/List" value="RatingGuide"/></li>
+        
+            <li class="header"><h:link class="index" outcome="/wine/List" value="Wine"/></li>
+        
+            <li class="header"><h:link class="index" outcome="/wineAtMerchants/List" value="WineAtMerchants"/></li>
+        
+            <li class="header"><h:link class="index" outcome="/wineColours/List" value="WineColours"/></li>
+        
+            <li class="header"><h:link class="index" outcome="/wineGoesWithFood/List" value="WineGoesWithFood"/></li>
+        
+            <li class="header"><h:link class="index" outcome="/winemaker/List" value="Winemaker"/></li>
+        </ul></header>
         <h1>
             <ui:insert name="title">Default Title</ui:insert>
         </h1>
-        <p>
+        <div id="body">
             <ui:insert name="body">Default Body</ui:insert>
-        </p>
+        </div>
+        <!--<h:form>
+            <f:view locale="#{langBean.initPage()}"/>
+            <h:commandButton value="#{bundle.button}" action="#{langBean.setLocale()}"></h:commandButton></h:form>-->
+        <!--<c:choose>
+            <c:when test="">
+                
+            </c:when>
+        </c:choose> -->
     </h:body>
 
 </html>

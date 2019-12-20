@@ -15,10 +15,11 @@
                     <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
                 </h:panelGroup>
                 <h:outputText escape="false" value="#{bundle.ListWineAtMerchantsEmpty}" rendered="#{wineAtMerchantsController.items.rowCount == 0}"/>
+                <br/>
                 <h:panelGroup rendered="#{wineAtMerchantsController.items.rowCount > 0}">
                     <h:outputText value="#{wineAtMerchantsController.pagination.pageFirstItem + 1}..#{wineAtMerchantsController.pagination.pageLastItem + 1}/#{wineAtMerchantsController.pagination.itemsCount}"/>&nbsp;
                     <h:commandLink action="#{wineAtMerchantsController.previous}" value="#{bundle.Previous} #{wineAtMerchantsController.pagination.pageSize}" rendered="#{wineAtMerchantsController.pagination.hasPreviousPage}"/>&nbsp;
-                    <h:commandLink action="#{wineAtMerchantsController.next}" value="#{bundle.Next} #{wineAtMerchantsController.pagination.pageSize}" rendered="#{wineAtMerchantsController.pagination.hasNextPage}"/>&nbsp;
+                    <h:commandLink action="#{wineAtMerchantsController.next}" value="#{bou.Next} #{wineAtMerchantsController.pagination.pageSize}" rendered="#{wineAtMerchantsController.pagination.hasNextPage}"/>&nbsp;
                     <h:dataTable value="#{wineAtMerchantsController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
                         <h:column>
                             <f:facet name="header">
@@ -58,11 +59,11 @@
                             <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
-                            <h:commandLink action="#{wineAtMerchantsController.prepareView}" value="#{bundle.ListWineAtMerchantsViewLink}"/>
+                            <div class="tableLink"><img id="linkImg" src="../resources/image/view.png"/><h:commandLink class="tableLink" action="#{wineAtMerchantsController.prepareView}" value="#{bundle.ListWineAtMerchantsViewLink}"/></div>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{wineAtMerchantsController.prepareEdit}" value="#{bundle.ListWineAtMerchantsEditLink}"/>
+                            <div class="tableLink"><img id="linkImg" src="../resources/image/edit.png"/><h:commandLink class="tableLink" action="#{wineAtMerchantsController.prepareEdit}" value="#{bundle.ListWineAtMerchantsEditLink}"/></div>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{wineAtMerchantsController.destroy}" value="#{bundle.ListWineAtMerchantsDestroyLink}"/>
+                            <div class="tableLink"><img id="linkImg" src="../resources/image/delete.png"/><h:commandLink class="tableLink" action="#{wineAtMerchantsController.destroy}" value="#{bundle.ListWineAtMerchantsDestroyLink}"/></div>
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>

@@ -81,6 +81,7 @@ public class RatingGuideController implements Serializable {
 
     public String create() {
         try {
+            recreateModel();
             getFacade().create(current);
             JsfUtil.addSuccessMessage(ResourceBundle.getBundle("/Bundle").getString("RatingGuideCreated"));
             return prepareCreate();

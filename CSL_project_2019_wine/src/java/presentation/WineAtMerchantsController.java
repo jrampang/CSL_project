@@ -83,6 +83,7 @@ public class WineAtMerchantsController implements Serializable {
 
     public String create() {
         try {
+            recreateModel();
             current.getWineAtMerchantsPK().setWineId(current.getWine().getWineId());
             current.getWineAtMerchantsPK().setMerchantId(current.getMerchants().getMerchantId());
             getFacade().create(current);

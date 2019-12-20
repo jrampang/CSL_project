@@ -15,6 +15,7 @@
                     <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
                 </h:panelGroup>
                 <h:outputText escape="false" value="#{bundle.ListMerchantsEmpty}" rendered="#{merchantsController.items.rowCount == 0}"/>
+                <br/>
                 <h:panelGroup rendered="#{merchantsController.items.rowCount > 0}">
                     <h:outputText value="#{merchantsController.pagination.pageFirstItem + 1}..#{merchantsController.pagination.pageLastItem + 1}/#{merchantsController.pagination.itemsCount}"/>&nbsp;
                     <h:commandLink action="#{merchantsController.previous}" value="#{bundle.Previous} #{merchantsController.pagination.pageSize}" rendered="#{merchantsController.pagination.hasPreviousPage}"/>&nbsp;
@@ -36,11 +37,11 @@
                             <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
-                            <h:commandLink action="#{merchantsController.prepareView}" value="#{bundle.ListMerchantsViewLink}"/>
+                            <div class="tableLink"><img id="linkImg" src="../resources/image/view.png"/><h:commandLink class="tableLink" action="#{merchantsController.prepareView}" value="#{bundle.ListMerchantsViewLink}"/></div>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{merchantsController.prepareEdit}" value="#{bundle.ListMerchantsEditLink}"/>
+                            <div class="tableLink"><img id="linkImg" src="../resources/image/edit.png"/><h:commandLink class="tableLink" action="#{merchantsController.prepareEdit}" value="#{bundle.ListMerchantsEditLink}"/></div>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{merchantsController.destroy}" value="#{bundle.ListMerchantsDestroyLink}"/>
+                            <div class="tableLink"><img id="linkImg" src="../resources/image/delete.png"/><h:commandLink class="tableLink" action="#{merchantsController.destroy}" value="#{bundle.ListMerchantsDestroyLink}"/></div>
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>

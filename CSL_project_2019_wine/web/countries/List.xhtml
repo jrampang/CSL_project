@@ -11,10 +11,12 @@
         </ui:define>
         <ui:define name="body">
             <h:form styleClass="jsfcrud_list_form">
+                <br/>
                 <h:panelGroup id="messagePanel" layout="block">
                     <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
                 </h:panelGroup>
                 <h:outputText escape="false" value="#{bundle.ListCountriesEmpty}" rendered="#{countriesController.items.rowCount == 0}"/>
+            <br/>
                 <h:panelGroup rendered="#{countriesController.items.rowCount > 0}">
                     <h:outputText value="#{countriesController.pagination.pageFirstItem + 1}..#{countriesController.pagination.pageLastItem + 1}/#{countriesController.pagination.itemsCount}"/>&nbsp;
                     <h:commandLink action="#{countriesController.previous}" value="#{bundle.Previous} #{countriesController.pagination.pageSize}" rendered="#{countriesController.pagination.hasPreviousPage}"/>&nbsp;
@@ -36,20 +38,22 @@
                             <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
-                            <h:commandLink action="#{countriesController.prepareView}" value="#{bundle.ListCountriesViewLink}"/>
+                            <div class="tableLink"><img id="linkImg" src="../resources/image/view.png"/><h:commandLink class="tableLink" action="#{countriesController.prepareView}" value="#{bundle.ListCountriesViewLink}"></h:commandLink></div>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{countriesController.prepareEdit}" value="#{bundle.ListCountriesEditLink}"/>
+                            <div class="tableLink"><img id="linkImg" src="../resources/image/edit.png"/><h:commandLink class="tableLink" action="#{countriesController.prepareEdit}" value="#{bundle.ListCountriesEditLink}"/></div>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{countriesController.destroy}" value="#{bundle.ListCountriesDestroyLink}"/>
+                            <div class="tableLink"><img id="linkImg" src="../resources/image/delete.png"/><h:commandLink class="tableLink" action="#{countriesController.destroy}" value="#{bundle.ListCountriesDestroyLink}"/></div>
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>
                 <br />
                 <h:commandLink action="#{countriesController.prepareCreate}" value="#{bundle.ListCountriesCreateLink}"/>
                 <br />
-                <br />
+                <br/>
                 <h:link outcome="/index" value="#{bundle.ListCountriesIndexLink}"/>
+                <br />
             </h:form>
+            
         </ui:define>
     </ui:composition>
 

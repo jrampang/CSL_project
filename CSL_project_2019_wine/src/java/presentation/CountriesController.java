@@ -74,6 +74,7 @@ public class CountriesController implements Serializable {
     }
 
     public String prepareCreate() {
+            recreateModel();
         current = new Countries();
         selectedItemIndex = -1;
         return "Create";
@@ -81,6 +82,7 @@ public class CountriesController implements Serializable {
 
     public String create() {
         try {
+            recreateModel();
             getFacade().create(current);
             JsfUtil.addSuccessMessage(ResourceBundle.getBundle("/Bundle").getString("CountriesCreated"));
             return prepareCreate();

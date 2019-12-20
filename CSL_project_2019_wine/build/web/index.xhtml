@@ -7,26 +7,55 @@
         <h:outputStylesheet name="css/jsfcrud.css"/>
     </h:head>
     <h:body>
+        <header><ul>
+            <li class="header"><h:link class="index" outcome="index" value="Accueil"/></li>
+            
+            <li class="header"><h:link class="index" outcome="/countries/List" value="Countries"/></li>
+       
+            <li class="header"><h:link class="index" outcome="/food/List" value="Food"/></li>
+        
+            <li class="header"><h:link class="index" outcome="/infoSources/List" value="InfoSources"/></li>
+        
+            <li class="header"><h:link class="index" outcome="/merchants/List" value="Merchants"/></li>
+        
+            <li class="header"><h:link class="index" outcome="/ratingGuide/List" value="RatingGuide"/></li>
+        
+            <li class="header"><h:link class="index" outcome="/wine/List" value="Wine"/></li>
+        
+            <li class="header"><h:link class="index" outcome="/wineAtMerchants/List" value="WineAtMerchants"/></li>
+        
+            <li class="header"><h:link class="index" outcome="/wineColours/List" value="WineColours"/></li>
+        
+            <li class="header"><h:link class="index" outcome="/wineGoesWithFood/List" value="WineGoesWithFood"/></li>
+        
+            <li class="header"><h:link class="index" outcome="/winemaker/List" value="Winemaker"/></li>
+        </ul></header>
+        <div>
+        <h1>Wine Database</h1><br/>
+        <p>Welcome to our website about wine.<br/> Here is our list of items :</p>
         <br />
-        <h:link outcome="/countries/List" value="Show All Countries Items"/>
-        <br />
-        <h:link outcome="/food/List" value="Show All Food Items"/>
-        <br />
-        <h:link outcome="/infoSources/List" value="Show All InfoSources Items"/>
-        <br />
-        <h:link outcome="/merchants/List" value="Show All Merchants Items"/>
-        <br />
-        <h:link outcome="/ratingGuide/List" value="Show All RatingGuide Items"/>
-        <br />
-        <h:link outcome="/wine/List" value="Show All Wine Items"/>
-        <br />
-        <h:link outcome="/wineAtMerchants/List" value="Show All WineAtMerchants Items"/>
-        <br />
-        <h:link outcome="/wineColours/List" value="Show All WineColours Items"/>
-        <br />
-        <h:link outcome="/wineGoesWithFood/List" value="Show All WineGoesWithFood Items"/>
-        <br />
-        <h:link outcome="/winemaker/List" value="Show All Winemaker Items"/>
+        <ul id="indexLinks">
+            <li><h:link class="index" outcome="/countries/List" value="Show All Countries Items"/></li>
+       
+            <li><h:link class="index" outcome="/food/List" value="Show All Food Items"/></li>
+        
+            <li><h:link class="index" outcome="/infoSources/List" value="Show All InfoSources Items"/></li>
+        
+            <li><h:link class="index" outcome="/merchants/List" value="Show All Merchants Items"/></li>
+        
+            <li><h:link class="index" outcome="/ratingGuide/List" value="Show All RatingGuide Items"/></li>
+        
+            <li><h:link class="index" outcome="/wine/List" value="Show All Wine Items"/></li>
+        
+            <li><h:link class="index" outcome="/wineAtMerchants/List" value="Show All WineAtMerchants Items"/></li>
+        
+            <li><h:link class="index" outcome="/wineColours/List" value="Show All WineColours Items"/></li>
+        
+            <li><h:link class="index" outcome="/wineGoesWithFood/List" value="Show All WineGoesWithFood Items"/></li>
+        
+            <li><h:link class="index" outcome="/winemaker/List" value="Show All Winemaker Items"/></li>
+        </ul></div>
+        
     </h:body>
 </html>
 

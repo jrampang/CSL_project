@@ -83,6 +83,7 @@ public class WineGoesWithFoodController implements Serializable {
 
     public String create() {
         try {
+            recreateModel();
             current.getWineGoesWithFoodPK().setWineId(current.getWine().getWineId());
             current.getWineGoesWithFoodPK().setFoodName(current.getFood().getFoodName());
             getFacade().create(current);

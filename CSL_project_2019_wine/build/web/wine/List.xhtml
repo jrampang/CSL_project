@@ -15,6 +15,7 @@
                     <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
                 </h:panelGroup>
                 <h:outputText escape="false" value="#{bundle.ListWineEmpty}" rendered="#{wineController.items.rowCount == 0}"/>
+            <br/>
                 <h:panelGroup rendered="#{wineController.items.rowCount > 0}">
                     <h:outputText value="#{wineController.pagination.pageFirstItem + 1}..#{wineController.pagination.pageLastItem + 1}/#{wineController.pagination.itemsCount}"/>&nbsp;
                     <h:commandLink action="#{wineController.previous}" value="#{bundle.Previous} #{wineController.pagination.pageSize}" rendered="#{wineController.pagination.hasPreviousPage}"/>&nbsp;
@@ -90,11 +91,11 @@
                             <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
-                            <h:commandLink action="#{wineController.prepareView}" value="#{bundle.ListWineViewLink}"/>
+                            <div class="tableLink"><img id="linkImg" src="../resources/image/view.png"/><h:commandLink class="tableLink" action="#{wineController.prepareView}" value="#{bundle.ListWineViewLink}"/></div>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{wineController.prepareEdit}" value="#{bundle.ListWineEditLink}"/>
+                            <div class="tableLink"><img id="linkImg" src="../resources/image/edit.png"/><h:commandLink class="tableLink" action="#{wineController.prepareEdit}" value="#{bundle.ListWineEditLink}"/></div>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{wineController.destroy}" value="#{bundle.ListWineDestroyLink}"/>
+                            <div class="tableLink"><img id="linkImg" src="../resources/image/delete.png"/><h:commandLink class="tableLink" action="#{wineController.destroy}" value="#{bundle.ListWineDestroyLink}"/></div>
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>

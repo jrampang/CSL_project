@@ -15,6 +15,7 @@
                     <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
                 </h:panelGroup>
                 <h:outputText escape="false" value="#{bundle.ListInfoSourcesEmpty}" rendered="#{infoSourcesController.items.rowCount == 0}"/>
+                <br/>
                 <h:panelGroup rendered="#{infoSourcesController.items.rowCount > 0}">
                     <h:outputText value="#{infoSourcesController.pagination.pageFirstItem + 1}..#{infoSourcesController.pagination.pageLastItem + 1}/#{infoSourcesController.pagination.itemsCount}"/>&nbsp;
                     <h:commandLink action="#{infoSourcesController.previous}" value="#{bundle.Previous} #{infoSourcesController.pagination.pageSize}" rendered="#{infoSourcesController.pagination.hasPreviousPage}"/>&nbsp;
@@ -36,11 +37,11 @@
                             <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
-                            <h:commandLink action="#{infoSourcesController.prepareView}" value="#{bundle.ListInfoSourcesViewLink}"/>
+                            <div class="tableLink"><img id="linkImg" src="../resources/image/view.png"/><h:commandLink class="tableLink" action="#{infoSourcesController.prepareView}" value="#{bundle.ListInfoSourcesViewLink}"/></div>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{infoSourcesController.prepareEdit}" value="#{bundle.ListInfoSourcesEditLink}"/>
+                            <div class="tableLink"><img id="linkImg" src="../resources/image/edit.png"/><h:commandLink class="tableLink" action="#{infoSourcesController.prepareEdit}" value="#{bundle.ListInfoSourcesEditLink}"/></div>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{infoSourcesController.destroy}" value="#{bundle.ListInfoSourcesDestroyLink}"/>
+                            <div class="tableLink"><img id="linkImg" src="../resources/image/delete.png"/><h:commandLink class="tableLink" action="#{infoSourcesController.destroy}" value="#{bundle.ListInfoSourcesDestroyLink}"/></div>
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>

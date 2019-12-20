@@ -15,6 +15,7 @@
                     <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
                 </h:panelGroup>
                 <h:outputText escape="false" value="#{bundle.ListWineColoursEmpty}" rendered="#{wineColoursController.items.rowCount == 0}"/>
+                <br/>
                 <h:panelGroup rendered="#{wineColoursController.items.rowCount > 0}">
                     <h:outputText value="#{wineColoursController.pagination.pageFirstItem + 1}..#{wineColoursController.pagination.pageLastItem + 1}/#{wineColoursController.pagination.itemsCount}"/>&nbsp;
                     <h:commandLink action="#{wineColoursController.previous}" value="#{bundle.Previous} #{wineColoursController.pagination.pageSize}" rendered="#{wineColoursController.pagination.hasPreviousPage}"/>&nbsp;
@@ -30,11 +31,11 @@
                             <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
-                            <h:commandLink action="#{wineColoursController.prepareView}" value="#{bundle.ListWineColoursViewLink}"/>
+                            <div class="tableLink"><img id="linkImg" src="../resources/image/view.png"/><h:commandLink class="tableLink" action="#{wineColoursController.prepareView}" value="#{bundle.ListWineColoursViewLink}"/></div>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{wineColoursController.prepareEdit}" value="#{bundle.ListWineColoursEditLink}"/>
+                            <div class="tableLink"><img id="linkImg" src="../resources/image/edit.png"/><h:commandLink class="tableLink" action="#{wineColoursController.prepareEdit}" value="#{bundle.ListWineColoursEditLink}"/></div>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{wineColoursController.destroy}" value="#{bundle.ListWineColoursDestroyLink}"/>
+                            <div class="tableLink"><img id="linkImg" src="../resources/image/delete.png"/><h:commandLink class="tableLink" action="#{wineColoursController.destroy}" value="#{bundle.ListWineColoursDestroyLink}"/></div>
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>
