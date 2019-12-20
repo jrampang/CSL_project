@@ -21,13 +21,13 @@
                     <h:inputText id="merchantName" value="#{merchantsController.selected.merchantName}" title="#{bundle.CreateMerchantsTitle_merchantName}" required="true" requiredMessage="#{bundle.CreateMerchantsRequiredMessage_merchantName}"/>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{merchantsController.create}" value="#{bundle.CreateMerchantsSaveLink}" />
-                <br />
-                <br />
-                <h:commandLink action="#{merchantsController.prepareList}" value="#{bundle.CreateMerchantsShowAllLink}" immediate="true"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.CreateMerchantsIndexLink}"/>
+                <div class="bodyLinks">
+                <h:commandLink class="bodyLink" action="#{merchantsController.create}" value="#{bundle.CreateMerchantsSaveLink}" />
+        
+                <h:commandLink class="bodyLink" action="#{merchantsController.prepareList}" value="#{bundle.CreateMerchantsShowAllLink}" immediate="true"/>
+           
+                <h:link class="bodyLink" outcome="/index" value="#{bundle.CreateMerchantsIndexLink}"/>
+                </div>
             </h:form>
         </ui:define>
     </ui:composition>

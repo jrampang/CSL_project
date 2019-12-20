@@ -52,10 +52,11 @@
                     </h:dataTable>
                 </h:panelGroup>
                 <br />
-                <h:commandLink action="#{winemakerController.prepareCreate}" value="#{bundle.ListWinemakerCreateLink}"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.ListWinemakerIndexLink}"/>
+                <div class="bodyLinks">
+                <h:commandLink class="bodyLink" action="#{winemakerController.prepareCreate}" value="#{bundle.ListWinemakerCreateLink}"/>
+       
+                <h:link class="bodyLink" outcome="/index" value="#{bundle.ListWinemakerIndexLink}"/>
+                </div>
             </h:form>
         </ui:define>
     </ui:composition>

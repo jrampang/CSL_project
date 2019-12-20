@@ -26,16 +26,15 @@
                         <f:selectItems value="#{wineController.itemsAvailableSelectOne}"/>
                     </h:selectOneMenu>
                 </h:panelGrid>
-                <h:commandLink action="#{wineGoesWithFoodController.update}" value="#{bundle.EditWineGoesWithFoodSaveLink}"/>
-                <br />
-                <br />
-                <h:link outcome="View" value="#{bundle.EditWineGoesWithFoodViewLink}"/>
-                <br />
-                <br/>
-                <h:commandLink action="#{wineGoesWithFoodController.prepareList}" value="#{bundle.EditWineGoesWithFoodShowAllLink}" immediate="true"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.EditWineGoesWithFoodIndexLink}" />
+                <div class="bodyLinks">
+                <h:commandLink class="bodyLink" action="#{wineGoesWithFoodController.update}" value="#{bundle.EditWineGoesWithFoodSaveLink}"/>
+        
+                <h:link class="bodyLink" outcome="View" value="#{bundle.EditWineGoesWithFoodViewLink}"/>
+       
+                <h:commandLink class="bodyLink" action="#{wineGoesWithFoodController.prepareList}" value="#{bundle.EditWineGoesWithFoodShowAllLink}" immediate="true"/>
+        
+                <h:link class="bodyLink" outcome="/index" value="#{bundle.EditWineGoesWithFoodIndexLink}" />
+                </div>
             </h:form>
         </ui:define>
     </ui:composition>

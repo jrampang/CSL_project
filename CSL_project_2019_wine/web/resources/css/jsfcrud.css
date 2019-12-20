@@ -19,10 +19,12 @@ a {
     color: black;
     text-decoration: none;
     background-color : #ddbc95;
-    padding : 8px 5px;
+    padding : 5px 8px;
+    margin : auto;
     margin-bottom : 8px;
-    border-radius: 6px;
+    border-radius: 15px;
 }
+
 
 .index, .tableLink{
     background-color : transparent;
@@ -110,6 +112,7 @@ header{
     background-color: #3d4345;
     height : fit-content;
     width : 100%;
+    text-align: center;
 }
 
 .header{
@@ -129,13 +132,14 @@ header{
 ul{    
     height : 100%;
     margin: 0;
+    padding-left : 0;
 }
 
 #indexLinks{
     height : 100%;
-    margin: 0;
     width: 400px;
     margin: auto;
+    margin-bottom: 10px;
 }
 
 div{
@@ -146,7 +150,6 @@ div{
 
 h1, p{
     text-align: center;
-    margin-bottom: 70px;
 }
 
 table{
@@ -160,4 +163,25 @@ table{
 
 #viewImg{
     float: left;
+}
+
+br{
+    margin-bottom: 5px;
+}
+
+.bodyLink{
+    margin : auto;
+    margin-right : 15px;
+}
+
+.bodyLinks{
+    width : max-content;
+    margin : auto;
+}
+
+#indexLinks{
+    list-style : none;
+    text-decoration: none;
+    padding : 0;
+    text-align: center;
 }

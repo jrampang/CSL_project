@@ -39,18 +39,17 @@
                     <h:outputText value="#{wineController.selected.colour}" title="#{bundle.ViewWineTitle_colour}"/>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{wineController.destroyAndView}" value="#{bundle.ViewWineDestroyLink}"/>
-                <br />
-                <br />
-                <h:link outcome="Edit" value="#{bundle.ViewWineEditLink}"/>
-                <br />
-                <h:commandLink action="#{wineController.prepareCreate}" value="#{bundle.ViewWineCreateLink}" />
-                <br />
-                <br/>
-                <h:commandLink action="#{wineController.prepareList}" value="#{bundle.ViewWineShowAllLink}"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.ViewWineIndexLink}"/>
+                <div class="bodyLinks">
+                <h:commandLink class="bodyLink" action="#{wineController.destroyAndView}" value="#{bundle.ViewWineDestroyLink}"/>
+            
+                <h:link class="bodyLink" outcome="Edit" value="#{bundle.ViewWineEditLink}"/>
+          
+                <h:commandLink class="bodyLink" action="#{wineController.prepareCreate}" value="#{bundle.ViewWineCreateLink}" />
+         
+                <h:commandLink class="bodyLink" action="#{wineController.prepareList}" value="#{bundle.ViewWineShowAllLink}"/>
+         
+                <h:link class="bodyLink" outcome="/index" value="#{bundle.ViewWineIndexLink}"/>
+                </div>
 
             </h:form>
         </ui:define>

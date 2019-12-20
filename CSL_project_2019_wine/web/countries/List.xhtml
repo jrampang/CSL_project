@@ -47,10 +47,9 @@
                     </h:dataTable>
                 </h:panelGroup>
                 <br />
-                <h:commandLink action="#{countriesController.prepareCreate}" value="#{bundle.ListCountriesCreateLink}"/>
-                <br />
-                <br/>
-                <h:link outcome="/index" value="#{bundle.ListCountriesIndexLink}"/>
+                <h:commandLink class="bodyLink" action="#{countriesController.prepareCreate}" value="#{bundle.ListCountriesCreateLink}"/>
+
+                <h:link outcome="/index" class="bodyLink" value="#{bundle.ListCountriesIndexLink}"/>
                 <br />
             </h:form>
             

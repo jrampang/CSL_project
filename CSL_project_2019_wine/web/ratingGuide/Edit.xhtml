@@ -24,16 +24,15 @@
                         <f:selectItems value="#{wineColoursController.itemsAvailableSelectOne}"/>
                     </h:selectOneMenu>
                 </h:panelGrid>
-                <h:commandLink action="#{ratingGuideController.update}" value="#{bundle.EditRatingGuideSaveLink}"/>
-                <br />
-                <br />
-                <h:link outcome="View" value="#{bundle.EditRatingGuideViewLink}"/>
-                <br />
-                <br/>
-                <h:commandLink action="#{ratingGuideController.prepareList}" value="#{bundle.EditRatingGuideShowAllLink}" immediate="true"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.EditRatingGuideIndexLink}" />
+                <div class="bodyLinks">
+                <h:commandLink class="bodyLink" action="#{ratingGuideController.update}" value="#{bundle.EditRatingGuideSaveLink}"/>
+          
+                <h:link class="bodyLink" outcome="View" value="#{bundle.EditRatingGuideViewLink}"/>
+      
+                <h:commandLink class="bodyLink" action="#{ratingGuideController.prepareList}" value="#{bundle.EditRatingGuideShowAllLink}" immediate="true"/>
+        
+                <h:link class="bodyLink" outcome="/index" value="#{bundle.EditRatingGuideIndexLink}" />
+                </div>
             </h:form>
         </ui:define>
     </ui:composition>

@@ -8,9 +8,9 @@
             <base-name>Bundle</base-name>
             <var>bundle</var>
         </resource-bundle>
-        <!--<locale-config>
+        <locale-config>
             <default-locale>fr</default-locale>
             <supported-locale>en</supported-locale>
-        </locale-config>-->
+        </locale-config>
     </application>
 </faces-config>

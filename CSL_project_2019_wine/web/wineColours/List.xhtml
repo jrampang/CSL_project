@@ -40,10 +40,11 @@
                     </h:dataTable>
                 </h:panelGroup>
                 <br />
-                <h:commandLink action="#{wineColoursController.prepareCreate}" value="#{bundle.ListWineColoursCreateLink}"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.ListWineColoursIndexLink}"/>
+                <div class="bodyLinks">
+                <h:commandLink class="bodyLink" action="#{wineColoursController.prepareCreate}" value="#{bundle.ListWineColoursCreateLink}"/>
+       
+                <h:link class="bodyLink" outcome="/index" value="#{bundle.ListWineColoursIndexLink}"/>
+                </div>
             </h:form>
         </ui:define>
     </ui:composition>

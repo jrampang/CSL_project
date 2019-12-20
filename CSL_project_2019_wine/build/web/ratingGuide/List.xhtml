@@ -52,10 +52,11 @@
                     </h:dataTable>
                 </h:panelGroup>
                 <br />
-                <h:commandLink action="#{ratingGuideController.prepareCreate}" value="#{bundle.ListRatingGuideCreateLink}"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.ListRatingGuideIndexLink}"/>
+                <div class="bodyLinks">
+                <h:commandLink class="bodyLink" action="#{ratingGuideController.prepareCreate}" value="#{bundle.ListRatingGuideCreateLink}"/>
+       
+                <h:link class="bodyLink" outcome="/index" value="#{bundle.ListRatingGuideIndexLink}"/>
+                </div>
             </h:form>
         </ui:define>
     </ui:composition>

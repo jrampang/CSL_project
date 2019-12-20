@@ -18,16 +18,15 @@
                     <h:outputLabel value="#{bundle.EditWineColoursLabel_colour}" for="colour" />
                     <h:inputText id="colour" value="#{wineColoursController.selected.colour}" title="#{bundle.EditWineColoursTitle_colour}" required="true" requiredMessage="#{bundle.EditWineColoursRequiredMessage_colour}"/>
                 </h:panelGrid>
-                <h:commandLink action="#{wineColoursController.update}" value="#{bundle.EditWineColoursSaveLink}"/>
-                <br />
-                <br />
-                <h:link outcome="View" value="#{bundle.EditWineColoursViewLink}"/>
-                <br />
-                <br/>
-                <h:commandLink action="#{wineColoursController.prepareList}" value="#{bundle.EditWineColoursShowAllLink}" immediate="true"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.EditWineColoursIndexLink}" />
+                <div class="bodyLinks">
+                <h:commandLink class="bodyLink" action="#{wineColoursController.update}" value="#{bundle.EditWineColoursSaveLink}"/>
+         
+                <h:link class="bodyLink" outcome="View" value="#{bundle.EditWineColoursViewLink}"/>
+           
+                <h:commandLink class="bodyLink" action="#{wineColoursController.prepareList}" value="#{bundle.EditWineColoursShowAllLink}" immediate="true"/>
+          
+                <h:link class="bodyLink" outcome="/index" value="#{bundle.EditWineColoursIndexLink}" />
+                </div>
             </h:form>
         </ui:define>
     </ui:composition>

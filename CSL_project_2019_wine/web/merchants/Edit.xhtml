@@ -20,16 +20,15 @@
                     <h:outputLabel value="#{bundle.EditMerchantsLabel_merchantName}" for="merchantName" />
                     <h:inputText id="merchantName" value="#{merchantsController.selected.merchantName}" title="#{bundle.EditMerchantsTitle_merchantName}" required="true" requiredMessage="#{bundle.EditMerchantsRequiredMessage_merchantName}"/>
                 </h:panelGrid>
-                <h:commandLink action="#{merchantsController.update}" value="#{bundle.EditMerchantsSaveLink}"/>
-                <br />
-                <br />
-                <h:link outcome="View" value="#{bundle.EditMerchantsViewLink}"/>
-                <br />
-                <br/>
-                <h:commandLink action="#{merchantsController.prepareList}" value="#{bundle.EditMerchantsShowAllLink}" immediate="true"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.EditMerchantsIndexLink}" />
+                <div class="bodyLinks">
+                <h:commandLink class="bodyLink" action="#{merchantsController.update}" value="#{bundle.EditMerchantsSaveLink}"/>
+     
+                <h:link class="bodyLink" outcome="View" value="#{bundle.EditMerchantsViewLink}"/>
+    
+                <h:commandLink class="bodyLink" action="#{merchantsController.prepareList}" value="#{bundle.EditMerchantsShowAllLink}" immediate="true"/>
+     
+                <h:link class="bodyLink" outcome="/index" value="#{bundle.EditMerchantsIndexLink}" />
+                </div>
             </h:form>
         </ui:define>
     </ui:composition>

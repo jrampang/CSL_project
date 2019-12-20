@@ -21,18 +21,17 @@
                     <h:outputText value="#{merchantsController.selected.merchantName}" title="#{bundle.ViewMerchantsTitle_merchantName}"/>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{merchantsController.destroyAndView}" value="#{bundle.ViewMerchantsDestroyLink}"/>
-                <br />
-                <br />
-                <h:link outcome="Edit" value="#{bundle.ViewMerchantsEditLink}"/>
-                <br />
-                <h:commandLink action="#{merchantsController.prepareCreate}" value="#{bundle.ViewMerchantsCreateLink}" />
-                <br />
-                <br/>
-                <h:commandLink action="#{merchantsController.prepareList}" value="#{bundle.ViewMerchantsShowAllLink}"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.ViewMerchantsIndexLink}"/>
+                <div class="bodyLinks">
+                <h:commandLink class="bodyLink" action="#{merchantsController.destroyAndView}" value="#{bundle.ViewMerchantsDestroyLink}"/>
+         
+                <h:link class="bodyLink" outcome="Edit" value="#{bundle.ViewMerchantsEditLink}"/>
+          
+                <h:commandLink class="bodyLink" action="#{merchantsController.prepareCreate}" value="#{bundle.ViewMerchantsCreateLink}" />
+       
+                <h:commandLink class="bodyLink" action="#{merchantsController.prepareList}" value="#{bundle.ViewMerchantsShowAllLink}"/>
+
+                <h:link class="bodyLink" outcome="/index" value="#{bundle.ViewMerchantsIndexLink}"/>
+                </div>
 
             </h:form>
         </ui:define>

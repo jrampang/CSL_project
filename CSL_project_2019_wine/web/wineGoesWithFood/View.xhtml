@@ -23,18 +23,17 @@
                     <h:outputText value="#{wineGoesWithFoodController.selected.wine}" title="#{bundle.ViewWineGoesWithFoodTitle_wine}"/>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{wineGoesWithFoodController.destroyAndView}" value="#{bundle.ViewWineGoesWithFoodDestroyLink}"/>
-                <br />
-                <br />
-                <h:link outcome="Edit" value="#{bundle.ViewWineGoesWithFoodEditLink}"/>
-                <br />
-                <h:commandLink action="#{wineGoesWithFoodController.prepareCreate}" value="#{bundle.ViewWineGoesWithFoodCreateLink}" />
-                <br />
-                <br/>
-                <h:commandLink action="#{wineGoesWithFoodController.prepareList}" value="#{bundle.ViewWineGoesWithFoodShowAllLink}"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.ViewWineGoesWithFoodIndexLink}"/>
+                <div class="bodyLinks">
+                <h:commandLink class="bodyLink" action="#{wineGoesWithFoodController.destroyAndView}" value="#{bundle.ViewWineGoesWithFoodDestroyLink}"/>
+         
+                <h:link class="bodyLink" outcome="Edit" value="#{bundle.ViewWineGoesWithFoodEditLink}"/>
+           
+                <h:commandLink class="bodyLink" action="#{wineGoesWithFoodController.prepareCreate}" value="#{bundle.ViewWineGoesWithFoodCreateLink}" />
+      
+                <h:commandLink class="bodyLink" action="#{wineGoesWithFoodController.prepareList}" value="#{bundle.ViewWineGoesWithFoodShowAllLink}"/>
+       
+                <h:link class="bodyLink" outcome="/index" value="#{bundle.ViewWineGoesWithFoodIndexLink}"/>
+                </div>
 
             </h:form>
         </ui:define>

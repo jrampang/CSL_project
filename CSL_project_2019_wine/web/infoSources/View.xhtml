@@ -21,19 +21,17 @@
                     <h:outputText value="#{infoSourcesController.selected.infoSourceDescription}" title="#{bundle.ViewInfoSourcesTitle_infoSourceDescription}"/>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{infoSourcesController.destroyAndView}" value="#{bundle.ViewInfoSourcesDestroyLink}"/>
-                <br />
-                <br />
-                <h:link outcome="Edit" value="#{bundle.ViewInfoSourcesEditLink}"/>
-                <br />
-                <h:commandLink action="#{infoSourcesController.prepareCreate}" value="#{bundle.ViewInfoSourcesCreateLink}" />
-                <br />
-                <br/>
-                <h:commandLink action="#{infoSourcesController.prepareList}" value="#{bundle.ViewInfoSourcesShowAllLink}"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.ViewInfoSourcesIndexLink}"/>
+                <div class="bodyLinks">
+                <h:commandLink class="bodyLink" action="#{infoSourcesController.destroyAndView}" value="#{bundle.ViewInfoSourcesDestroyLink}"/>
+                
+                <h:link class="bodyLink" outcome="Edit" value="#{bundle.ViewInfoSourcesEditLink}"/>
 
+                <h:commandLink class="bodyLink" action="#{infoSourcesController.prepareCreate}" value="#{bundle.ViewInfoSourcesCreateLink}" />
+
+                <h:commandLink class="bodyLink" action="#{infoSourcesController.prepareList}" value="#{bundle.ViewInfoSourcesShowAllLink}"/>
+
+                <h:link class="bodyLink" outcome="/index" value="#{bundle.ViewInfoSourcesIndexLink}"/>
+                </div>
             </h:form>
         </ui:define>
     </ui:composition>

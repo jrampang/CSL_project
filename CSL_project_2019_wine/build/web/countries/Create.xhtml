@@ -21,13 +21,11 @@
                     <h:inputText id="countryName" value="#{countriesController.selected.countryName}" title="#{bundle.CreateCountriesTitle_countryName}" required="true" requiredMessage="#{bundle.CreateCountriesRequiredMessage_countryName}"/>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{countriesController.create}" value="#{bundle.CreateCountriesSaveLink}" />
-                <br />
-                <br />
-                <h:commandLink action="#{countriesController.prepareList}" value="#{bundle.CreateCountriesShowAllLink}" immediate="true"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.CreateCountriesIndexLink}"/>
+                <h:commandLink class="bodyLink" action="#{countriesController.create}" value="#{bundle.CreateCountriesSaveLink}" />
+
+                <h:commandLink class="bodyLink" action="#{countriesController.prepareList}" value="#{bundle.CreateCountriesShowAllLink}" immediate="true"/>
+
+                <h:link class="bodyLink" outcome="/index" value="#{bundle.CreateCountriesIndexLink}"/>
             </h:form>
         </ui:define>
     </ui:composition>

@@ -19,13 +19,13 @@
                     <h:inputText id="colour" value="#{wineColoursController.selected.colour}" title="#{bundle.CreateWineColoursTitle_colour}" required="true" requiredMessage="#{bundle.CreateWineColoursRequiredMessage_colour}"/>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{wineColoursController.create}" value="#{bundle.CreateWineColoursSaveLink}" />
-                <br />
-                <br />
-                <h:commandLink action="#{wineColoursController.prepareList}" value="#{bundle.CreateWineColoursShowAllLink}" immediate="true"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.CreateWineColoursIndexLink}"/>
+                <div class="bodyLinks">
+                <h:commandLink class="bodyLink" action="#{wineColoursController.create}" value="#{bundle.CreateWineColoursSaveLink}" />
+   
+                <h:commandLink class="bodyLink" action="#{wineColoursController.prepareList}" value="#{bundle.CreateWineColoursShowAllLink}" immediate="true"/>
+       
+                <h:link class="bodyLink" outcome="/index" value="#{bundle.CreateWineColoursIndexLink}"/>
+                </div>
             </h:form>
         </ui:define>
     </ui:composition>

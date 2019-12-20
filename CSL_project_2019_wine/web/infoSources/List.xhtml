@@ -46,10 +46,11 @@
                     </h:dataTable>
                 </h:panelGroup>
                 <br />
-                <h:commandLink action="#{infoSourcesController.prepareCreate}" value="#{bundle.ListInfoSourcesCreateLink}"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.ListInfoSourcesIndexLink}"/>
+                <div class="bodyLinks">
+                <h:commandLink class="bodyLink" action="#{infoSourcesController.prepareCreate}" value="#{bundle.ListInfoSourcesCreateLink}"/>
+     
+                <h:link class="bodyLink" outcome="/index" value="#{bundle.ListInfoSourcesIndexLink}"/>
+                </div>
             </h:form>
         </ui:define>
     </ui:composition>

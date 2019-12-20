@@ -20,16 +20,15 @@
                     <h:outputLabel value="#{bundle.EditFoodLabel_foodDescription}" for="foodDescription" />
                     <h:inputText id="foodDescription" value="#{foodController.selected.foodDescription}" title="#{bundle.EditFoodTitle_foodDescription}" required="true" requiredMessage="#{bundle.EditFoodRequiredMessage_foodDescription}"/>
                 </h:panelGrid>
-                <h:commandLink action="#{foodController.update}" value="#{bundle.EditFoodSaveLink}"/>
-                <br />
-                <br />
-                <h:link outcome="View" value="#{bundle.EditFoodViewLink}"/>
-                <br />
-                <br/>
-                <h:commandLink action="#{foodController.prepareList}" value="#{bundle.EditFoodShowAllLink}" immediate="true"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.EditFoodIndexLink}" />
+                <div class="bodyLinks">
+                <h:commandLink class="bodyLink" action="#{foodController.update}" value="#{bundle.EditFoodSaveLink}"/>
+     
+                <h:link class="bodyLink" outcome="View" value="#{bundle.EditFoodViewLink}"/>
+      
+                <h:commandLink class="bodyLink" action="#{foodController.prepareList}" value="#{bundle.EditFoodShowAllLink}" immediate="true"/>
+         
+                <h:link class="bodyLink" outcome="/index" value="#{bundle.EditFoodIndexLink}" />
+                </div>
             </h:form>
         </ui:define>
     </ui:composition>

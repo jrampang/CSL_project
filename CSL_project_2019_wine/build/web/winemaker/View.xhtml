@@ -23,18 +23,17 @@
                     <h:outputText value="#{winemakerController.selected.countryId}" title="#{bundle.ViewWinemakerTitle_countryId}"/>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{winemakerController.destroyAndView}" value="#{bundle.ViewWinemakerDestroyLink}"/>
-                <br />
-                <br />
-                <h:link outcome="Edit" value="#{bundle.ViewWinemakerEditLink}"/>
-                <br />
-                <h:commandLink action="#{winemakerController.prepareCreate}" value="#{bundle.ViewWinemakerCreateLink}" />
-                <br />
-                <br/>
-                <h:commandLink action="#{winemakerController.prepareList}" value="#{bundle.ViewWinemakerShowAllLink}"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.ViewWinemakerIndexLink}"/>
+                <div class="bodyLinks">
+                <h:commandLink class="bodyLink" action="#{winemakerController.destroyAndView}" value="#{bundle.ViewWinemakerDestroyLink}"/>
+
+                <h:link class="bodyLink" outcome="Edit" value="#{bundle.ViewWinemakerEditLink}"/>
+
+                <h:commandLink class="bodyLink" action="#{winemakerController.prepareCreate}" value="#{bundle.ViewWinemakerCreateLink}" />
+
+                <h:commandLink class="bodyLink" action="#{winemakerController.prepareList}" value="#{bundle.ViewWinemakerShowAllLink}"/>
+
+                <h:link class="bodyLink" outcome="/index" value="#{bundle.ViewWinemakerIndexLink}"/>
+                </div>
 
             </h:form>
         </ui:define>

@@ -21,15 +21,12 @@
                     <h:inputText id="countryName" value="#{countriesController.selected.countryName}" title="#{bundle.EditCountriesTitle_countryName}" required="true" requiredMessage="#{bundle.EditCountriesRequiredMessage_countryName}"/>
                 </h:panelGrid>
                 <h:commandLink action="#{countriesController.update}" value="#{bundle.EditCountriesSaveLink}"/>
-                <br />
-                <br />
-                <h:link outcome="View" value="#{bundle.EditCountriesViewLink}"/>
-                <br />
-                <br/>
-                <h:commandLink action="#{countriesController.prepareList}" value="#{bundle.EditCountriesShowAllLink}" immediate="true"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.EditCountriesIndexLink}" />
+
+                <h:link class="bodyLink" outcome="View" value="#{bundle.EditCountriesViewLink}"/>
+
+                <h:commandLink class="bodyLink" action="#{countriesController.prepareList}" value="#{bundle.EditCountriesShowAllLink}" immediate="true"/>
+
+                <h:link class="bodyLink" outcome="/index" value="#{bundle.EditCountriesIndexLink}" />
             </h:form>
         </ui:define>
     </ui:composition>

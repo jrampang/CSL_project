@@ -23,18 +23,17 @@
                     <h:outputText value="#{ratingGuideController.selected.colour}" title="#{bundle.ViewRatingGuideTitle_colour}"/>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{ratingGuideController.destroyAndView}" value="#{bundle.ViewRatingGuideDestroyLink}"/>
-                <br />
-                <br />
-                <h:link outcome="Edit" value="#{bundle.ViewRatingGuideEditLink}"/>
-                <br />
-                <h:commandLink action="#{ratingGuideController.prepareCreate}" value="#{bundle.ViewRatingGuideCreateLink}" />
-                <br />
-                <br/>
-                <h:commandLink action="#{ratingGuideController.prepareList}" value="#{bundle.ViewRatingGuideShowAllLink}"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.ViewRatingGuideIndexLink}"/>
+                <div class="bodyLinks">
+                <h:commandLink class="bodyLink" action="#{ratingGuideController.destroyAndView}" value="#{bundle.ViewRatingGuideDestroyLink}"/>
+      
+                <h:link class="bodyLink" outcome="Edit" value="#{bundle.ViewRatingGuideEditLink}"/>
+          
+                <h:commandLink class="bodyLink" action="#{ratingGuideController.prepareCreate}" value="#{bundle.ViewRatingGuideCreateLink}" />
+          
+                <h:commandLink class="bodyLink" action="#{ratingGuideController.prepareList}" value="#{bundle.ViewRatingGuideShowAllLink}"/>
+         
+                <h:link class="bodyLink" outcome="/index" value="#{bundle.ViewRatingGuideIndexLink}"/>
+                </div>
 
             </h:form>
         </ui:define>

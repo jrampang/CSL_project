@@ -35,13 +35,13 @@
                     </h:selectOneMenu>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{wineAtMerchantsController.create}" value="#{bundle.CreateWineAtMerchantsSaveLink}" />
-                <br />
-                <br />
-                <h:commandLink action="#{wineAtMerchantsController.prepareList}" value="#{bundle.CreateWineAtMerchantsShowAllLink}" immediate="true"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.CreateWineAtMerchantsIndexLink}"/>
+                <div class="bodyLinks">
+                <h:commandLink class="bodyLink" action="#{wineAtMerchantsController.create}" value="#{bundle.CreateWineAtMerchantsSaveLink}" />
+        
+                <h:commandLink class="bodyLink" action="#{wineAtMerchantsController.prepareList}" value="#{bundle.CreateWineAtMerchantsShowAllLink}" immediate="true"/>
+          
+                <h:link class="bodyLink" outcome="/index" value="#{bundle.CreateWineAtMerchantsIndexLink}"/>
+                </div>
             </h:form>
         </ui:define>
     </ui:composition>

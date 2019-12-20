@@ -20,16 +20,15 @@
                     <h:outputLabel value="#{bundle.EditInfoSourcesLabel_infoSourceDescription}" for="infoSourceDescription" />
                     <h:inputText id="infoSourceDescription" value="#{infoSourcesController.selected.infoSourceDescription}" title="#{bundle.EditInfoSourcesTitle_infoSourceDescription}" required="true" requiredMessage="#{bundle.EditInfoSourcesRequiredMessage_infoSourceDescription}"/>
                 </h:panelGrid>
-                <h:commandLink action="#{infoSourcesController.update}" value="#{bundle.EditInfoSourcesSaveLink}"/>
-                <br />
-                <br />
-                <h:link outcome="View" value="#{bundle.EditInfoSourcesViewLink}"/>
-                <br />
-                <br/>
-                <h:commandLink action="#{infoSourcesController.prepareList}" value="#{bundle.EditInfoSourcesShowAllLink}" immediate="true"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.EditInfoSourcesIndexLink}" />
+                <div class="bodyLinks">
+                <h:commandLink class="bodyLink" action="#{infoSourcesController.update}" value="#{bundle.EditInfoSourcesSaveLink}"/>
+     
+                <h:link class="bodyLink" outcome="View" value="#{bundle.EditInfoSourcesViewLink}"/>
+  
+                <h:commandLink class="bodyLink" action="#{infoSourcesController.prepareList}" value="#{bundle.EditInfoSourcesShowAllLink}" immediate="true"/>
+   
+                <h:link class="bodyLink" outcome="/index" value="#{bundle.EditInfoSourcesIndexLink}" />
+                </div>
             </h:form>
         </ui:define>
     </ui:composition>

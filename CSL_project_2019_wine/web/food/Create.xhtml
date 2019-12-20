@@ -21,13 +21,13 @@
                     <h:inputText id="foodDescription" value="#{foodController.selected.foodDescription}" title="#{bundle.CreateFoodTitle_foodDescription}" required="true" requiredMessage="#{bundle.CreateFoodRequiredMessage_foodDescription}"/>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{foodController.create}" value="#{bundle.CreateFoodSaveLink}" />
-                <br />
-                <br />
-                <h:commandLink action="#{foodController.prepareList}" value="#{bundle.CreateFoodShowAllLink}" immediate="true"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.CreateFoodIndexLink}"/>
+                <div class="bodyLinks">
+                <h:commandLink class="bodyLink" action="#{foodController.create}" value="#{bundle.CreateFoodSaveLink}" />
+      
+                <h:commandLink class="bodyLink" action="#{foodController.prepareList}" value="#{bundle.CreateFoodShowAllLink}" immediate="true"/>
+     
+                <h:link class="bodyLink" outcome="/index" value="#{bundle.CreateFoodIndexLink}"/>
+                </div>
             </h:form>
         </ui:define>
     </ui:composition>

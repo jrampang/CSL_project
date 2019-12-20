@@ -21,18 +21,15 @@
                     <h:outputText value="#{countriesController.selected.countryName}" title="#{bundle.ViewCountriesTitle_countryName}"/>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{countriesController.destroyAndView}" value="#{bundle.ViewCountriesDestroyLink}"/>
-                <br />
-                <br />
-                <h:link outcome="Edit" value="#{bundle.ViewCountriesEditLink}"/>
-                <br />
-                <h:commandLink action="#{countriesController.prepareCreate}" value="#{bundle.ViewCountriesCreateLink}" />
-                <br />
-                <br/>
-                <h:commandLink action="#{countriesController.prepareList}" value="#{bundle.ViewCountriesShowAllLink}"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.ViewCountriesIndexLink}"/>
+                <h:commandLink class="bodyLink" class="bodyLink" action="#{countriesController.destroyAndView}" value="#{bundle.ViewCountriesDestroyLink}"/>
+   
+                <h:link class="bodyLink" class="bodyLink" outcome="Edit" value="#{bundle.ViewCountriesEditLink}"/>
+ 
+                <h:commandLink class="bodyLink" class="bodyLink" action="#{countriesController.prepareCreate}" value="#{bundle.ViewCountriesCreateLink}" />
+
+                <h:commandLink class="bodyLink" class="bodyLink" action="#{countriesController.prepareList}" value="#{bundle.ViewCountriesShowAllLink}"/>
+       
+                <h:link class="bodyLink" class="bodyLink" outcome="/index" value="#{bundle.ViewCountriesIndexLink}"/>
 
             </h:form>
         </ui:define>

@@ -8,52 +8,62 @@
     </h:head>
     <h:body>
         <header><ul>
-            <li class="header"><h:link class="index" outcome="index" value="Accueil"/></li>
-            
-            <li class="header"><h:link class="index" outcome="/countries/List" value="Countries"/></li>
+            <li class="header"><h:link class="index" outcome="/index" value="#{bundle.ListCountriesIndexLink}"/></li>
+            <li class="header"><h:link class="index" outcome="/countries/List" value="#{bundle.ListCountriesTitle}"/></li>
        
-            <li class="header"><h:link class="index" outcome="/food/List" value="Food"/></li>
+            <li class="header"><h:link class="index" outcome="/food/List" value="#{bundle.ListFoodTitle}"/></li>
         
-            <li class="header"><h:link class="index" outcome="/infoSources/List" value="InfoSources"/></li>
+            <li class="header"><h:link class="index" outcome="/infoSources/List" value="#{bundle.ListInfoSourcesTitle}"/></li>
         
-            <li class="header"><h:link class="index" outcome="/merchants/List" value="Merchants"/></li>
+            <li class="header"><h:link class="index" outcome="/merchants/List" value="#{bundle.ListMerchantsTitle}"/></li>
         
-            <li class="header"><h:link class="index" outcome="/ratingGuide/List" value="RatingGuide"/></li>
+            <li class="header"><h:link class="index" outcome="/ratingGuide/List" value="#{bundle.ListRatingGuideTitle}"/></li>
         
-            <li class="header"><h:link class="index" outcome="/wine/List" value="Wine"/></li>
+            <li class="header"><h:link class="index" outcome="/wine/List" value="#{bundle.ListWineTitle}"/></li>
         
-            <li class="header"><h:link class="index" outcome="/wineAtMerchants/List" value="WineAtMerchants"/></li>
+            <li class="header"><h:link class="index" outcome="/wineAtMerchants/List" value="#{bundle.ListWineAtMerchantsTitle}"/></li>
         
-            <li class="header"><h:link class="index" outcome="/wineColours/List" value="WineColours"/></li>
+            <li class="header"><h:link class="index" outcome="/wineColours/List" value="#{bundle.ListWineColoursTitle}"/></li>
         
-            <li class="header"><h:link class="index" outcome="/wineGoesWithFood/List" value="WineGoesWithFood"/></li>
+            <li class="header"><h:link class="index" outcome="/wineGoesWithFood/List" value="#{bundle.ListWineGoesWithFoodTitle}"/></li>
         
-            <li class="header"><h:link class="index" outcome="/winemaker/List" value="Winemaker"/></li>
+            <li class="header"><h:link class="index" outcome="/winemaker/List" value="#{bundle.ListWinemakerTitle}"/></li>
         </ul></header>
         <div>
-        <h1>Wine Database</h1><br/>
-        <p>Welcome to our website about wine.<br/> Here is our list of items :</p>
+        <h1>#{bundle.HomeTitle}</h1><br/>
+        <p>#{bundle.HomeWelcomeMessage1}<br/>#{bundle.HomeWelcomeMessage2}</p>
         <br />
+        <br/>
         <ul id="indexLinks">
-            <li><h:link class="index" outcome="/countries/List" value="Show All Countries Items"/></li>
+            <li><h:link class="bodyLink" outcome="/countries/List" value="Show All Countries Items"/></li>
+            <br/>
        
-            <li><h:link class="index" outcome="/food/List" value="Show All Food Items"/></li>
+            <li><h:link class="bodyLink" outcome="/food/List" value="Show All Food Items"/></li>
+            <br/>
         
-            <li><h:link class="index" outcome="/infoSources/List" value="Show All InfoSources Items"/></li>
+            <li><h:link class="bodyLink" outcome="/infoSources/List" value="Show All InfoSources Items"/></li>
+            <br/>
         
-            <li><h:link class="index" outcome="/merchants/List" value="Show All Merchants Items"/></li>
+            <li><h:link class="bodyLink" outcome="/merchants/List" value="Show All Merchants Items"/></li>
+            <br/>
         
-            <li><h:link class="index" outcome="/ratingGuide/List" value="Show All RatingGuide Items"/></li>
+            <li><h:link class="bodyLink" outcome="/ratingGuide/List" value="Show All RatingGuide Items"/></li>
+            <br/>
         
-            <li><h:link class="index" outcome="/wine/List" value="Show All Wine Items"/></li>
+            <li><h:link class="bodyLink" outcome="/wine/List" value="Show All Wine Items"/></li>
+            <br/>
         
-            <li><h:link class="index" outcome="/wineAtMerchants/List" value="Show All WineAtMerchants Items"/></li>
+            <li><h:link class="bodyLink" outcome="/wineAtMerchants/List" value="Show All WineAtMerchants Items"/></li>
+            <br/>
         
-            <li><h:link class="index" outcome="/wineColours/List" value="Show All WineColours Items"/></li>
+            <li><h:link class="bodyLink" outcome="/wineColours/List" value="Show All WineColours Items"/></li>
+            <br/>
         
-            <li><h:link class="index" outcome="/wineGoesWithFood/List" value="Show All WineGoesWithFood Items"/></li>
+            <li><h:link class="bodyLink" outcome="/wineGoesWithFood/List" value="Show All WineGoesWithFood Items"/></li>
+            <br/>
         
-            <li><h:link class="index" outcome="/winemaker/List" value="Show All Winemaker Items"/></li>
+            <li><h:link class="bodyLink" outcome="/winemaker/List" value="Show All Winemaker Items"/></li>
+            <br/>
         </ul></div>
         
     </h:body>

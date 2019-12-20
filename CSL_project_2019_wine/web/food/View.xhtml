@@ -21,18 +21,17 @@
                     <h:outputText value="#{foodController.selected.foodDescription}" title="#{bundle.ViewFoodTitle_foodDescription}"/>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{foodController.destroyAndView}" value="#{bundle.ViewFoodDestroyLink}"/>
-                <br />
-                <br />
-                <h:link outcome="Edit" value="#{bundle.ViewFoodEditLink}"/>
-                <br />
-                <h:commandLink action="#{foodController.prepareCreate}" value="#{bundle.ViewFoodCreateLink}" />
-                <br />
-                <br/>
-                <h:commandLink action="#{foodController.prepareList}" value="#{bundle.ViewFoodShowAllLink}"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.ViewFoodIndexLink}"/>
+                <div class="bodyLinks">
+                <h:commandLink class="bodyLink" action="#{foodController.destroyAndView}" value="#{bundle.ViewFoodDestroyLink}"/>
+        
+                <h:link class="bodyLink" outcome="Edit" value="#{bundle.ViewFoodEditLink}"/>
+        
+                <h:commandLink class="bodyLink" action="#{foodController.prepareCreate}" value="#{bundle.ViewFoodCreateLink}" />
+       
+                <h:commandLink class="bodyLink" action="#{foodController.prepareList}" value="#{bundle.ViewFoodShowAllLink}"/>
+        
+                <h:link class="bodyLink" outcome="/index" value="#{bundle.ViewFoodIndexLink}"/>
+                </div>
 
             </h:form>
         </ui:define>

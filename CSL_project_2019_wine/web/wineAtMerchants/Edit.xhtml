@@ -34,16 +34,15 @@
                         <f:selectItems value="#{wineController.itemsAvailableSelectOne}"/>
                     </h:selectOneMenu>
                 </h:panelGrid>
-                <h:commandLink action="#{wineAtMerchantsController.update}" value="#{bundle.EditWineAtMerchantsSaveLink}"/>
-                <br />
-                <br />
-                <h:link outcome="View" value="#{bundle.EditWineAtMerchantsViewLink}"/>
-                <br />
-                <br/>
-                <h:commandLink action="#{wineAtMerchantsController.prepareList}" value="#{bundle.EditWineAtMerchantsShowAllLink}" immediate="true"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.EditWineAtMerchantsIndexLink}" />
+                <div class="bodyLinks">
+                <h:commandLink class="bodyLink" action="#{wineAtMerchantsController.update}" value="#{bundle.EditWineAtMerchantsSaveLink}"/>
+             
+                <h:link class="bodyLink" outcome="View" value="#{bundle.EditWineAtMerchantsViewLink}"/>
+         
+                <h:commandLink class="bodyLink" action="#{wineAtMerchantsController.prepareList}" value="#{bundle.EditWineAtMerchantsShowAllLink}" immediate="true"/>
+             
+                <h:link class="bodyLink" outcome="/index" value="#{bundle.EditWineAtMerchantsIndexLink}" />
+                </div>
             </h:form>
         </ui:define>
     </ui:composition>

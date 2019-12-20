@@ -21,13 +21,13 @@
                     <h:inputText id="infoSourceDescription" value="#{infoSourcesController.selected.infoSourceDescription}" title="#{bundle.CreateInfoSourcesTitle_infoSourceDescription}" required="true" requiredMessage="#{bundle.CreateInfoSourcesRequiredMessage_infoSourceDescription}"/>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{infoSourcesController.create}" value="#{bundle.CreateInfoSourcesSaveLink}" />
-                <br />
-                <br />
-                <h:commandLink action="#{infoSourcesController.prepareList}" value="#{bundle.CreateInfoSourcesShowAllLink}" immediate="true"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.CreateInfoSourcesIndexLink}"/>
+                <div class="bodyLinks">
+                <h:commandLink class="bodyLink" action="#{infoSourcesController.create}" value="#{bundle.CreateInfoSourcesSaveLink}" />
+      
+                <h:commandLink class="bodyLink" action="#{infoSourcesController.prepareList}" value="#{bundle.CreateInfoSourcesShowAllLink}" immediate="true"/>
+       
+                <h:link class="bodyLink" outcome="/index" value="#{bundle.CreateInfoSourcesIndexLink}"/>
+                </div>
             </h:form>
         </ui:define>
     </ui:composition>
